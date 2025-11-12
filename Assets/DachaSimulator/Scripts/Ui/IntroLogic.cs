@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
@@ -15,7 +16,7 @@ namespace DachaSimulator.Ui
         [SerializeField] private Sprite[] introBackgrounds;
         private Sequence _currentAnimation;
         
-        public void ChangePhrase(int phraseIndex, int phraseBackgroundIndex)
+        /*public void ChangePhrase(int phraseIndex, int phraseBackgroundIndex)
         {
             string currentPhrase = introPhraseTexts[phraseIndex];
             Sprite currentPhraseBackground = introBackgrounds[phraseBackgroundIndex];
@@ -28,15 +29,29 @@ namespace DachaSimulator.Ui
                     introImage.sprite = currentPhraseBackground;
                 })
                 .Join(introImage.DOFade(1f, 0.5f));
-        }
-        
-        /*private void Start()
+        }*/
+
+        private void Start() => StartCoroutine(ShowIntro());
+
+        private IEnumerator ShowIntro()
         {
             foreach (Phrase phrase in introPhrases)
             {
-                ChangePhrase(phrase.phraseIndex, phrase.phraseBackgroundIndex);
+                introImage.sprite = introBackgrounds[phrase.phraseBackgroundIndex];
+                yield return StartCoroutine(TypeText(introPhraseTexts[phrase.phraseIndex]));
+                yield return new WaitForSeconds(0.5f);
             }
-        }*/
+        }
+        
+        private IEnumerator TypeText(string text)
+        {
+            introText.text = String.Empty;
+            foreach (char c in text.ToCharArray())
+            {
+                introText.text += c;
+                yield return new WaitForSeconds(0.05f);
+            }
+        }
     }
 
     [Serializable]

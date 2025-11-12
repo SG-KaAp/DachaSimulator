@@ -261,6 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60601091}
   - component: {fileID: 60601092}
+  - component: {fileID: 60601093}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -333,6 +334,32 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &60601093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60601090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389c333af2a8e3ec9a588b8053e35b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_Client.UI.Menu.ButtonSounds
+  pointerEnterSoundEvent:
+    Guid:
+      Data1: 1110670631
+      Data2: 1154235878
+      Data3: -1564987264
+      Data4: -1333516441
+    Path: event:/Ui/MenuSelect
+  pointerClickSoundEvent:
+    Guid:
+      Data1: 779037019
+      Data2: 1126199285
+      Data3: 170422937
+      Data4: 236583827
+    Path: event:/Ui/MenuCursor
 --- !u!1 &93749180
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 93749181}
   - component: {fileID: 93749182}
+  - component: {fileID: 93749183}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -427,6 +455,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &93749183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93749180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389c333af2a8e3ec9a588b8053e35b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_Client.UI.Menu.ButtonSounds
+  pointerEnterSoundEvent:
+    Guid:
+      Data1: 1110670631
+      Data2: 1154235878
+      Data3: -1564987264
+      Data4: -1333516441
+    Path: event:/Ui/MenuSelect
+  pointerClickSoundEvent:
+    Guid:
+      Data1: 779037019
+      Data2: 1126199285
+      Data3: 170422937
+      Data4: 236583827
+    Path: event:/Ui/MenuCursor
 --- !u!1 &100810003
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100810004}
   - component: {fileID: 100810007}
+  - component: {fileID: 100810008}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -521,6 +576,32 @@ MonoBehaviour:
           m_StringArgument: Intro
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &100810008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100810003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389c333af2a8e3ec9a588b8053e35b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_Client.UI.Menu.ButtonSounds
+  pointerEnterSoundEvent:
+    Guid:
+      Data1: 1110670631
+      Data2: 1154235878
+      Data3: -1564987264
+      Data4: -1333516441
+    Path: event:/Ui/MenuSelect
+  pointerClickSoundEvent:
+    Guid:
+      Data1: 779037019
+      Data2: 1126199285
+      Data3: 170422937
+      Data4: 236583827
+    Path: event:/Ui/MenuCursor
 --- !u!1001 &168005934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4209,8 +4290,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1663577545}
   - component: {fileID: 1663577544}
-  - component: {fileID: 1663577543}
   - component: {fileID: 1663577546}
+  - component: {fileID: 1663577547}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4218,14 +4299,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1663577543
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663577542}
-  m_Enabled: 1
 --- !u!20 &1663577544
 Camera:
   m_ObjectHideFlags: 0
@@ -4336,6 +4409,20 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1663577547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663577542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &1680439316
 GameObject:
   m_ObjectHideFlags: 0
